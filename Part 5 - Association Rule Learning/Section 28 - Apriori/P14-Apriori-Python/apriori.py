@@ -1,8 +1,6 @@
 # Apriori
 
 # Importing the libraries
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
 
 # Data Preprocessing
@@ -17,3 +15,10 @@ rules = apriori(transactions, min_support = 0.003, min_confidence = 0.2, min_lif
 
 # Visualising the results
 results = list(rules)
+stopper = 0
+for i in results:
+    print (i)
+    print('\n\n\n')
+    stopper += 1
+    if(stopper == 10):
+        break
